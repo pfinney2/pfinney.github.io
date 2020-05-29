@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Window Test 2</title>
+
+<style type="text/css" media="all">
+
+.fromLeft {
+	position: relative;
+	left: -800px;
+	float: right;
+}
+
+.fromRight {
+	position: relative;
+	float: left;
+	left: 0;
+}
+
+.startingBox {
+	position: relative;
+	left: 0;
+	top: 0;
+	float: left;
+}
+
+#boxList {
+	list-style-type: none;
+}
+
+#boxList li {
+	float: left;
+	height: 30px;
+	width: 30px;
+	padding: 8px;
+	margin: 8px;
+	cursor: pointer;
+	border: 1px solid #FF0099;
+}
+
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({
+			type: 'GET',
+			url: 'script/boxes.json',
+			dataType: 'json',
+			success: jsonParser
+			});
+		$('#prevButton').css('cursor', 'pointer');
+		$('#nextButton').css('cursor', 'pointer');
+		
+	
+		
+/*			$('#nextButton').on("click", function(evt) {
+				var place = $('#container div').attr('id');
+				var place = ++place;
+		$.getJSON('script/boxes.json', function(data) {
+			$.each(data.boxes.box, function(key,value){
+				var bgColor = value.background_color;
+				var text = value.text;
+				var number = value.number;
+				if (number == place) {
+					$('#container div').replaceWith('<div id="' + number + '" style="width: 100px; height: 80px; background-color:' + bgColor + '; float: left;"><p>' + text + '</p></div>');
+					$('#window1').append('<div id="' + number + '" style="width: 150px; height: 120px; position: relative; left: 0; background-color:' + bgColor + '; float: left;"><p>' + text + '</p></div>');
+					$('#window1 div').animate({ left: '+=50'}, 1000, function() {alert("DONE!")});
+				}
+				return place;
+			});
+		});
+*/
+
+		$('#nextButton').on("click", function(evt) {
+			var place = $('#window1 div').attr('id');		
+		});
+				
+		$('#nextButton').click(function() {
+			if(!$('#window1 div').is(':animated')) {
+				$('#window1 #insideDiv div').addClass('currentBox');
+				$.getJSON('script/boxes.json',function(data) {
+					var place = $('.currentBox').attr('id');
+					$.each(data.boxes.box, function(k,v){
+						var bgColor = v.background_color;
+						var text = v.text;
+						var number = v.number;
+						var html = '<div id="' + number + '" class="fromLeft" style="width: 400px; height: 400px; background-color:' + bgColor + ';"><p>' + text + '</p></div>';
+						if (number == ((parseInt(place))+1)) {
+							$('#window1 #insideDiv').prepend(html);
+							$('#boxNumber').html(number);
+							//alert((parseInt(place))+1);
+							$('#window1 #insideDiv div').animate({left: '+=400'}, 500, function() {
+								$('.currentBox').remove();
+								$('.fromLeft').css({
+									'left': '0',
+									'float': 'left'
+								});
+								$('.fromLeft').removeClass('fromLeft');
+								$('#window1 #insideDiv div').addClass('startingBox');
+							});
+						}; //end if statement
+					}); //end each loop
+				});
+			};
+			return false;
+		}); //end click function
+		
+
+		$('#boxList li').click(function() {
+			var newPlace = parseInt($(this).attr('id'));
+			if(!$('#window1 div').is(':animated')) {
+				$('#window1 #insideDiv div').addClass('currentBox');
+				$.getJSON('script/boxes.json',function(data) {
+					var place = $('.currentBox').attr('id');
+					$.each(data.boxes.box, function(k,v){
+						var bgColor = v.background_color;
+						var text = v.text;
+						var number = v.number;
+						if ((newPlace == number) && (newPlace < place)) {
+							var html = '<div id="' + number + '" class="fromRight" style="width: 400px; height: 400px; background-color:' + bgColor + ';"><p>' + text + '</p></div>';
+							$('#window1 #insideDiv').append(html);
+							$('#boxNumber').html(number);
+							//alert((parseInt(place))+1);
+							$('#window1 #insideDiv div').animate({left: '-=400'}, 500, function() {
+								$('.currentBox').remove();
+								$('.fromRight').removeClass('fromRight');
+								$('#window1 #insideDiv div').css({
+									'left': '0',
+									'float': 'left'
+								});
+								$('#window1 #insideDiv div').addClass('startingBox');
+							});
+						} else if ((newPlace == number) && (newPlace > place)) {
+							var html = '<div id="' + number + '" class="fromLeft" style="width: 400px; height: 400px; background-color:' + bgColor + ';"><p>' + text + '</p></div>';
+							$('#window1 #insideDiv').prepend(html);
+							$('#boxNumber').html(number);
+							//alert((parseInt(place))+1);
+							$('#window1 #insideDiv div').animate({left: '+=400'}, 500, function() {
+								$('.currentBox').remove();
+								$('.fromLeft').css({
+									'left': '0',
+									'float': 'left'
+								});
+								$('.fromLeft').removeClass('fromLeft');
+								$('#window1 #insideDiv div').addClass('startingBox');
+							});
+						}; //end if statement
+					}); //end each loop
+				});
+			};
+			return false;
+		});
+	
+	
+		$('#prevButton').click(function() {
+			if(!$('#window1 div').is(':animated')) {
+				$('#window1 #insideDiv div').addClass('currentBox');
+				$.getJSON('script/boxes.json',function(data) {
+					var place = $('.currentBox').attr('id');
+					$.each(data.boxes.box, function(k,v){
+						var bgColor = v.background_color;
+						var text = v.text;
+						var number = v.number;
+						var html = '<div id="' + number + '" class="fromRight" style="width: 400px; height: 400px; background-color:' + bgColor + ';"><p>' + text + '</p></div>';
+						if (number == ((parseInt(place))-1)) {
+							$('#window1 #insideDiv').append(html);
+							$('#boxNumber').html(number);
+							//alert((parseInt(place))+1);
+							$('#window1 #insideDiv div').animate({left: '-=400'}, 500, function() {
+								$('.currentBox').remove();
+								$('.fromRight').removeClass('fromRight');
+								$('#window1 #insideDiv div').css({
+									'left': '0',
+									'float': 'left'
+								});
+								$('#window1 #insideDiv div').addClass('startingBox');
+								
+							});
+						}; //end if statement
+					}); //end each loop
+				});
+			};
+			return false;
+		}); //end click function	
+
+	});
+	
+	function jsonParser(json) {
+		$.getJSON('script/boxes.json',function(data) {
+			$.each(data.boxes.box, function(k,v){
+				var bgColor = v.background_color;
+				var text = v.text;
+				var number = v.number;
+				var html = '<div class="startingBox" id="' + number + '" style="width: 400px; height: 400px;  background-color:' + bgColor + ';"><p>' + text + '</p></div>';
+				if (number == 1) {
+					$('#window1 #insideDiv').append(html);
+					$('#boxNumber').html(number);
+				}
+			});
+		});
+	}
+	
+
+</script>
+</head>
+
+<body>
+<div id="window1" style="width: 450px; height: 410px; background-color: #999999;"><div id="insideDiv" style="width: 800px; height: 405px; border: 1px solid;"></div></div>
+<div id="window2" style="width: 200px; height: 90px; background-color: #99FF99;"></div>
+<div id="container"></div>
+<div id="prevButton" style="clear: both; width: 250px; border: 1px solid;"><p>PREVIOUS BOX</p></div>
+<div id="nextButton" style="clear: both; width: 250px; border: 1px solid;" ><p>NEXT BOX</p></div>
+<div id="boxNumber" style="clear: both; width: 50px; height: 50px; border: 1px solid;"></div>
+<ul id="boxList">
+	<li id="1">1</li>
+    <li id="2">2</li>
+    <li id="3">3</li>
+	<li id="4">4</li>
+    <li id="5">5</li>
+</ul>
+</body>
+</html>

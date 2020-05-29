@@ -1,0 +1,225 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Calendar Json Test</title>
+
+<style type="text/css" media="all">
+
+.dateCell {
+	cursor: pointer;
+	background-color: #999999;
+}
+
+.today {
+background-color: #6666FF;
+}
+
+.highlighted {
+	background-color: #663366;
+}
+
+#eventsBox {
+	overflow: hidden;
+
+}
+
+#insideDivContainer {
+	width: 440px;
+	height: 258px;
+	border: 1px solid;
+}
+
+
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$.ajax({
+			type: 'GET',
+			url: 'script/dates.json',
+			dataType: 'json',
+			success: jsonParser
+		});
+		
+
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1;
+		
+		$('#todaysDate').append('<p>' + dd + '</p>');
+		
+	
+
+		var month = "<table id='January' class='monthTable' cellpadding='0' cellspacing='0' border='0' style='width: 708px; border-collapse: collapse; font-family: Verdana, sans-serif; font-size: .5em;'><tbody><tr class='weekRow'>";
+		var i = 1;
+		var j = 1;
+		var startDate = 3;
+		var length = 31;
+		while ( i <= 35 ) {
+			while (( i >= startDate ) && ( j <= length )) {
+				month += '<td id="'+ j + '" class="dateCell" style="border: 1px solid #ffffff; width: 90px; height: 60px; padding: 8px;" valign="top"></td>';
+				if ((i % 7 == 0 ) && ( i == 35 )) {
+					month +='</tr></tbody></table>';
+				} else if ( i % 7 == 0 ) {
+					month += '</tr><tr class="weekRow">';
+				};
+				j++;
+				i++;
+			};
+			month +='<td style="border: 1px solid #ffffff; width: 90px; height: 60px; padding: 8px; background-color: #BBBBBB;" valign="top"></td>';
+			i++;
+		};
+		
+		
+		$('#calendarBox').append(month);
+		
+		var extras = (startDate + length - 35 - 1);
+		var lastWeek = '<tr class="weekRow">';
+		l = 1;
+		e = 1;
+		f = 1;
+		g = (25 - extras);
+		if ( (startDate + length) > 35 ) {
+			while ( e <= extras ) {
+				lastWeek += "<td id='" + g + "' class='dateCell' style='border: 1px solid #F03; width: 90px; height: 24px; padding: 8px;' valign='top'></td>";
+				e++;
+				g++;
+			}
+			while ( l <= (7-extras)) {
+				lastWeek +='<td rowspan="2" id="' + g + '" class="dateCell" style="border: 1px solid #D0A; width: 90px; height: 50px; padding: 8px;" valign="top"></td>';
+				l++;
+				g++;
+			}
+			lastWeek +='</tr><tr>'
+			while ( f <= extras ) {
+				lastWeek +='<td id="' + g + '" class="dateCell" style="border: 1px solid #F03; width: 90px; height: 24px; padding: 8px;" valign="top"></td>'
+				f++;
+				g++
+			}
+			lastWeek +='</tr>'
+			$('#calendarBox .weekRow:last').replaceWith(lastWeek);
+	
+		}
+		enterDates(length);	
+		$('.dateCell').hover(function() {
+			//var color = $(this).css("background-color");
+			//alert(color);
+			//$(this).css("background-color", "#663366");
+			$(this).addClass("highlighted");
+		},function() {
+			//$(this).css("background-color", color);
+			$(this).removeClass("highlighted");
+		});
+		
+		$('#' + dd).addClass("today");
+		appendDateText();
+		
+		$('.dateCell').click(function() {
+			var id = $(this).attr('id');
+			updateEvent(id, startDate);
+		});
+		
+	}); //endDocReadyFunc
+	
+	function updateEvent(date,start) {
+		//alert(date);
+		//Display date & special day events & recurring offerings
+		$.getJSON('script/dates.json',function(data) {
+			var eventHtml = '';
+			$.each(data.months, function(k,v) {
+				var monthName = v.name;
+				var dates = v.dates;
+				//alert(dates[0]);
+				if ($('.monthTable').attr('id') == monthName) {
+					for (var z = 0; z <= dates.length; z++) {
+						for (key in dates[z]) {
+							if ((dates[z].hasOwnProperty(key)) && (key == date) && (monthName == $('.monthTable').attr('id'))) {
+								eventHtml += '<p class="eventDetails">' + v.dates[z][key] + '</p>';
+								//alert(key);
+							};
+						};
+					};
+					var picnicDayCounter = (((parseInt(date) + start - 2) % 7) + 1);
+					if (picnicDayCounter != 2 && picnicDayCounter != 3) {
+						eventHtml += '<p class="eventDetails">Picnics Today</p>';
+					};
+					eventHtml += '<p class="eventDetails">Wine Tasting Today</p>';
+					$('#eventsBox div').append(eventHtml);
+				};
+			});
+		});		
+	};
+		
+		function enterDates(days) {
+			var d = 1;
+			$('.monthTable .dateCell').each(function() {
+				while ((d <= days) && ($(this).attr('id') == d)) {
+					$(this).append('<p style="margin: 0; padding: 0;">' + d + '</p>');
+					d++;
+				}
+			});
+		}
+		
+		function jsonParser(json) {
+			//alert("success");
+			$.getJSON('script/dates.json',function(data) {
+				var html2 = '<ul>';
+				$.each(data.months, function(k,v){
+					var name = v.name;
+					var days = v.days;
+					var dates = v.dates;
+					html2 += '<li><ul><li>' + name + '</li><li>' + days + '</li>';
+					for (var i = 0; i <= v.dates.length; i++) {
+						for (key in v.dates[i]) {
+							if (v.dates[i].hasOwnProperty(key)) {
+								//alert(key + " " + v.dates[i][key]);
+								html2 += '<li>' + key + " " + v.dates[i][key] + '</li>';	
+							};
+						};	
+					};
+					html2 += '</ul></li>';
+					//var html = '<ul><li>' + name + '</li><li>' + days + '</li><li>' + dates + '</li></ul>';
+				});
+				html2 += '</ul>';
+				$('#jsonData').append(html2);
+			});
+		}
+		
+		function appendDateText() {
+			$.getJSON('script/dates.json', function(data) {
+				$.each(data.months, function(k,v) {
+					var monthName = v.name;
+					var dates = v.dates;
+					$("#January .dateCell").each(function() {
+						for (var i = 0; i <= v.dates.length; i++) {
+							for (key in v.dates[i]) {
+								if ((v.dates[i].hasOwnProperty(key)) && (key == $(this).attr('id')) && (monthName == "January")) {
+									var eventText = '<p class="dateEvent" style="margin: 0; padding: 0;">' + v.dates[i][key] + '</p>';
+								};
+							};
+						};
+						$(this).append(eventText);				
+					});
+				});
+			});
+		}
+
+	
+
+</script>
+</head>
+
+<body>
+
+<div id="calendarBox" style="width: 1000px; border: 3px solid #0000FF;"></div>
+
+<div id="eventsBox" style="width: 220px; height: 260px; background-color: #FFCCCC;">
+    <div id="insideDivContainer">
+    </div>
+</div>
+
+</body>
+</html>

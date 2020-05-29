@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Lynmar Estate</title>
+
+<style type="text/css" media="all">
+
+.fromLeft {
+	position: relative;
+	float: right;
+	left: -1467px;
+}
+
+.fromRight {
+	position: relative;
+	float: left;
+	left: 0;
+}
+
+
+#monthLinks {
+	list-style-type: none;
+	position: relative;
+	float: none;
+	clear: right;
+}
+
+#monthLinks li {
+	float: left;
+	padding: 12px;
+	font-family: Arial, Helvetica, sans-serif;
+	cursor: pointer;
+}
+
+/*-------TABLE & CELL STYLES-------*/
+
+.monthTable {
+	position: relative;
+	top: 0;
+	border: 1px solid #FFFFFF;
+	border-collapse: collapse;
+	font-family: Verdana, sans-serif;
+	font-size: .5em;
+	background-color: #BBBBBB;
+}
+
+.monthNav {
+	float: left;	
+}
+
+
+/*---------Interactive------------*/
+
+.thisMonth {
+
+}
+
+.upcomingMonth {
+
+}
+
+.before {
+
+}
+
+.after {
+
+}
+
+
+
+/*--------- Calendar Containers ----------*/
+
+#monthInfoContainer {
+	float: left;
+	clear: left;
+	margin-right: 26px;
+}
+
+#monthImg {
+	width: 322px;
+	height: 415px;
+	background-color: #00FFFF;
+}
+
+#monthEvents {
+	width: 322px;
+	height: 210px;
+	background-color: #3399FF;
+	margin-top: 6px;
+}
+
+#monthEvents p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	position: relative;
+	padding-top: 8px;
+	padding-left: 8px;
+	margin: 0;
+}
+
+/*#calendarContainer {
+	width: 642px;
+	height: 415px;
+	float: left;
+}*/
+
+#datesContainer {
+	width: 652px;
+	height: 415px;
+	float: left;
+	background-color: #FF00FF;	
+	/*overflow: hidden;*/
+}
+
+#datesContainer #innerDatesContainer {
+	width: 1370px;
+	height: 415px;
+	border: 1px solid #339966;
+}
+
+.startingMonth {
+	position: relative;
+}
+
+.datesDiv {
+	width: 632px;
+	background-color: #093;
+	border: 1px solid #993333;
+}
+
+
+.firstTableDiv {
+	width: 632px;
+	border: 1px solid #00FF66;
+	float: left;
+	position: relative;
+	left: 0;
+}
+
+/*------ Event Blurb Styles -----------*/
+
+.eventBlurb {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+}
+
+
+.dateEvent {
+	background-color: #CCCCCC;
+	padding: 8px;
+	margin-top: 1px;
+	margin-bottom: 0;
+	display: none;
+}
+
+</style>
+
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+<script type="text/javascript" src="script/lynmarCal_4.js"></script>
+</head>
+
+<body>
+
+<header id="monthHeader">Month</header>
+<ul id="monthLinks">
+	<li id="jumpToJanuary">January</li>
+    <li id="jumpToFebruary">February</li>
+    <li id="jumpToMarch">March</li>
+	<li id="jumpToApril">April</li>
+    <li id="jumpToMay">May</li>
+    <li id="jumpToJune">June</li>
+	<li id="jumpToJuly">July</li>
+	<li id="jumpToAugust">August</li>
+    <li id="jumpToSeptember">September</li>
+    <li id="jumpToOctober">October</li>
+    <li id="jumpToNovember">November</li>
+    <li id="jumpToDecember">December</li>
+</ul>
+
+
+<div id="monthInfoContainer">
+    <div id="monthImg" style="">Month image</div>
+</div>
+<!--<div id="calendarContainer" style="border: 1px solid;">
+<p id="monthNameImg" class="monthNav">{MONTH}</p><p class="monthNav">{YEAR}</p><p class="monthNav">{LEFT}</p><p class="monthNav">{RIGHT}</p>
+-->
+	<div id="datesContainer">
+    	<div id="innerDatesContainer">
+        
+        </div>
+    </div>
+<!--</div>-->
+
+</body>
+</html>

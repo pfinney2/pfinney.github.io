@@ -1,0 +1,88 @@
+{
+	"months": {
+		"January" : {
+			"days"	: "31",
+			"number": "1",
+			"season": "winter",
+			"dates"	: [
+				{"01"	: "New Years Day"}
+			]
+		},
+		"February" : {
+			"days"	: "28",
+			"number": "2",
+			"season": "winter",
+			"dates"	: []
+		},
+		"March" : {
+			"days"	: "31",
+			"number": "3",
+			"season": "spring",
+			"dates"	: []
+		},
+		"April" : {
+			"days"	: "30",
+			"number": "4",
+			"season": "spring",
+			"dates"	: []
+		},
+		"May" : {
+			"days"	: "31",
+			"number": "5",
+			"season": "spring",
+			"dates"	: []
+		},
+		"June" : {
+			"days"	: "30",
+			"number": "6",
+			"season": "summer",
+			"dates"	: []
+		},
+		"July" : {
+			"days"	: "31",
+			"number": "7",
+			"season": "summer",
+			"dates"	: []
+		},
+		"August" : {
+			"days"	: "31",
+			"number": "8",
+			"season": "summer",
+			"dates"	: []
+		},
+		"September" : {
+			"days"	: "30",
+			"number": "9",
+			"season": "fall",
+			"dates"	: [
+				{"02"	: "Labor Day"},
+				{"24"	: "Wine Club Shipment"},
+				{"28"	: "Pick Up Party"}
+			]
+		},
+		"October" : {
+			"days"	: "31",
+			"number": "10",
+			"season": "fall",
+			"dates"	: [
+				{"01"	: "First day of the Month"},
+				{"15": "Tasting Room closed"},
+				{"30": "Halloween"}
+			]
+		},
+		"November" : {
+			"days"	: "30",
+			"number": "11",
+			"season": "fall",
+			"dates"	: [
+				{"28": "Thanksgiving"}
+			]
+		},
+		"December" : {
+			"days"	: "31",
+			"number": "12",
+			"season": "winter",
+			"dates"	: []
+		}
+	}
+}

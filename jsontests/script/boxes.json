@@ -1,0 +1,31 @@
+{
+	"boxes": {
+		"box": [
+			{
+			"background_color": "#004434",
+			"number": 1,
+			"text": "This is box 1"
+			},
+			{
+			"background_color": "#AE890F",
+			"number": 2,
+			"text": "This is box 2"
+			},
+			{
+			"background_color": "#440E01",
+			"number": 3,
+			"text": "This is box 3"
+			},
+			{
+			"background_color": "#996213",
+			"number": 4,
+			"text": "This is box 4"
+			},
+			{
+			"background_color": "#BEB21C",
+			"number": 5,
+			"text": "This is box 5"
+			}
+		]
+	}
+}
