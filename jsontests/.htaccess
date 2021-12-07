@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "hellojson"
-AuthUserFile "/home/pfinney4/.htpasswds/public_html/jsontests/passwd"
-require valid-user
