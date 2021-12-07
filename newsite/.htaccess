@@ -1,4 +1,0 @@
-AuthType Basic
-AuthName "newsite"
-AuthUserFile "/home/pfinney4/.htpasswds/public_html/newsite/passwd"
-require valid-user
