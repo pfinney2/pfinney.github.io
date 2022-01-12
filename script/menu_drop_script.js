@@ -5,8 +5,8 @@ jQuery(document).ready(function ($) {
 	// console.log('ready ' + position);
 
 	//open/close lateral navigation
-	$('.cd-nav-trigger').on('click', function (event) {
-		$('.cd-nav').slideToggle();
+	$('.about-trigger').on('click', function (event) {
+		$('.about').slideToggle();
 
 		// Patrick - replaced all of the below with .slideToggle()
 
@@ -14,11 +14,11 @@ jQuery(document).ready(function ($) {
 		if (position == 'down') {
 			position = 'up';
 			console.log(position);
-			$('.cd-nav-trigger').text('About');
+			$('.about-trigger').text('About');
 		} else {
 			position = 'down';
 			console.log(position);
-			$('.cd-nav-trigger').text('Close');
+			$('.about-trigger').text('Close');
 		}
 
 		// event.preventDefault();
