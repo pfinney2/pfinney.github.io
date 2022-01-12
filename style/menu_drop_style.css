@@ -114,7 +114,7 @@ main {
 }
 
 
-.about {
+.cd-nav-trigger {
   position: fixed;
   z-index: 3;
   display: inline-block;
