@@ -100,19 +100,19 @@ Main Components
 main {
 }
 
-.about {
+.cd-nav-trigger {
 	position: fixed;
 	z-index: 1;
 	display: inline-block;
 }
 
-.about {
+.cd-nav {
 	display: none;
 	z-index: 1;
 	width: 100%;
 	background-color: #000;
 }
-.about .cd-navigation-wrapper {
+.cd-nav .cd-navigation-wrapper {
 	/* all navigation content */
 	overflow-y: visible;
 	padding: 40px 5% 40px calc(5% + 80px);
@@ -260,13 +260,13 @@ div.text p.CTA {
 
 /* =+=+=+=+=+=+=+=  A B O U T   C O N T E N T  =+=+=+=+=+=+=+= */
 
-div#bg-text {
+div#about {
 	background-color: #000;
 	padding: 0;
 	margin: 67px 0 0 0;
 }
 
-div#bg-text p {
+div#about p {
 	font-family: bicyclette, sans-serif;
 	font-weight: 700;
 	font-style: normal;
@@ -274,7 +274,7 @@ div#bg-text p {
 	line-height: 29px;
 }
 
-div#bg-text p#intro {
+div#about p#intro {
 	float: left;
 	margin: 80px 0px;
 	width: 55%;
@@ -332,12 +332,12 @@ div.listfl ul li {
 		margin: 100px 180px 0px 180px;
 	}
 
-	div#bg-text {
+	div#about {
 		padding: 3% 6%;
 		margin: 0;
 	}
 
-	div#bg-text p {
+	div#about p {
 		float: left;
 		margin: 40px 0px 0px 0px;
 		font-size: 1.3em;
@@ -345,7 +345,7 @@ div.listfl ul li {
 		/*border: 2px solid #00f;*/
 	}
 
-	div#bg-text p#intro {
+	div#about p#intro {
 		float: left;
 		margin: 140px 5% 0px 0px;
 		width: 50%;
@@ -390,7 +390,7 @@ div.listfl ul li {
 		width: 72%;
 	}
 
-	.about .cd-navigation-wrapper {
+	.cd-nav .cd-navigation-wrapper {
 		/* all navigation content */
 		padding: 40px 5%;
 	}
@@ -500,24 +500,24 @@ div.listfl ul li {
 		background-repeat: no-repeat;
 	}
 
-	div#bg-text {
+	div#about {
 		padding: 0;
 		margin: 0;
 	}
 
-	div#bg-text p#intro {
+	div#about p#intro {
 		float: left;
 		margin: 90px 0px 0px 0px;
 		width: 100%;
 		color: #fff;
 	}
 
-	div#bg-text p {
+	div#about p {
 		font-size: 1.2em;
 		line-height: 23px;
 	}
 
-	.about .cd-navigation-wrapper {
+	.cd-nav .cd-navigation-wrapper {
 		/* all navigation content */
 		padding: 40px 5%;
 	}
