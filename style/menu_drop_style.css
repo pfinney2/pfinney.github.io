@@ -114,7 +114,7 @@ main {
 }
 
 
-.cd-nav-trigger {
+.about-trigger {
   position: fixed;
   z-index: 3;
   display: inline-block;
