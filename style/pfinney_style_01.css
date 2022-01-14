@@ -100,19 +100,19 @@ Main Components
 main {
 }
 
-.cd-nav-trigger {
+.nav-trigger {
 	position: fixed;
 	z-index: 1;
 	display: inline-block;
 }
 
-.cd-nav {
+.nav {
 	display: none;
 	z-index: 1;
 	width: 100%;
 	background-color: #000;
 }
-.cd-nav .cd-navigation-wrapper {
+.nav .navigation-wrapper {
 	/* all navigation content */
 	overflow-y: visible;
 	padding: 40px 5% 40px calc(5% + 80px);
@@ -390,7 +390,7 @@ div.listfl ul li {
 		width: 72%;
 	}
 
-	.cd-nav .cd-navigation-wrapper {
+	.nav .navigation-wrapper {
 		/* all navigation content */
 		padding: 40px 5%;
 	}
@@ -517,7 +517,7 @@ div.listfl ul li {
 		line-height: 23px;
 	}
 
-	.cd-nav .cd-navigation-wrapper {
+	.nav .navigation-wrapper {
 		/* all navigation content */
 		padding: 40px 5%;
 	}
