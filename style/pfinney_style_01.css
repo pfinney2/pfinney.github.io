@@ -260,13 +260,13 @@ div.text p.CTA {
 
 /* =+=+=+=+=+=+=+=  A B O U T   C O N T E N T  =+=+=+=+=+=+=+= */
 
-div#about {
+div#pitch {
 	background-color: #000;
 	padding: 0;
 	margin: 67px 0 0 0;
 }
 
-div#about p {
+div#pitch p {
 	font-family: bicyclette, sans-serif;
 	font-weight: 700;
 	font-style: normal;
@@ -274,7 +274,7 @@ div#about p {
 	line-height: 29px;
 }
 
-div#about p#intro {
+div#pitch p#intro {
 	float: left;
 	margin: 80px 0px;
 	width: 55%;
@@ -332,12 +332,12 @@ div.listfl ul li {
 		margin: 100px 180px 0px 180px;
 	}
 
-	div#about {
+	div#pitch {
 		padding: 3% 6%;
 		margin: 0;
 	}
 
-	div#about p {
+	div#pitch p {
 		float: left;
 		margin: 40px 0px 0px 0px;
 		font-size: 1.3em;
@@ -345,7 +345,7 @@ div.listfl ul li {
 		/*border: 2px solid #00f;*/
 	}
 
-	div#about p#intro {
+	div#pitch p#intro {
 		float: left;
 		margin: 140px 5% 0px 0px;
 		width: 50%;
@@ -500,19 +500,19 @@ div.listfl ul li {
 		background-repeat: no-repeat;
 	}
 
-	div#about {
+	div#pitch {
 		padding: 0;
 		margin: 0;
 	}
 
-	div#about p#intro {
+	div#pitch p#intro {
 		float: left;
 		margin: 90px 0px 0px 0px;
 		width: 100%;
 		color: #fff;
 	}
 
-	div#about p {
+	div#pitch p {
 		font-size: 1.2em;
 		line-height: 23px;
 	}
