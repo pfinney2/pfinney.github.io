@@ -1,7 +1,12 @@
+.flexboxes {
+	display: flex;
+	border: 3px solid #000;
+	background-color: #999;
+}
+
 #r1n1{
 	display: flex;
 	width: 30%;
 	height: 200px;
-	border: 3px solid #000;
 
 }
