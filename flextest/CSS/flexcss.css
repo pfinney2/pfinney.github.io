@@ -1,14 +1,48 @@
-.flexboxes {
+body {
+
+	background-color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+.flexboxes-container {
 	display: flex;
-	border: 3px solid #000;
-	background-color: #999;
-	justify-content: space-around;
+	justify-content: flex-start;
+	margin: 0;
+	padding: 0;
+}
+
+
+.flexboxes {
+	border-bottom: 1px solid #444444;
 	font-size: 24px;
 	font-style: bold;
-	width: 10%;
-	min-height: 200px;
+	min-height: 300px;
+	color: #FFFFFF;
+	margin: 0;
+	padding: 0;
 }
 
 #r1n1{
+	flex: 1;
+}	
 
+#r1n2{
+	flex: 1;
+	border-left: 1px solid #444444;	
+}	
+
+#r1n3{
+	flex: 2;
+	border-left: 1px solid #444444;	
+}	
+
+#r1n4{
+	flex: 3;
+	border-left: 1px solid #444444;	
+}	
+
+#r1n5{
+	flex: 1;
+	border-left: 1px solid #444444;
 }	
