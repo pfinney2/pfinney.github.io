@@ -450,7 +450,7 @@ footer {
 		font-size: 0.9em;
 	}
 
-	.flexboxes {
+	.flexboxes-row .flexboxes {
 		border-left: 0;
 	}
 
