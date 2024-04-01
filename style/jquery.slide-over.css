@@ -108,4 +108,8 @@ div.imgT img, div.imgW img {
     left: 20px;
   }
 
+  .imgSq {
+    width: 100%;
+  }
+
 }
