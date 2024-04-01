@@ -539,15 +539,17 @@ footer {
 	}
 
 	#clients {
-		margin-left: 30px;
-		margin-right: 30px;
-		gap: 0.15em;
+		margin-left: 12px;
+		margin-right: 12px;
+	}
+
+	.client-logo {
+		padding: 10px 0;
 	}
 
 	.client-logo img {
-		width: 120px;
-		margin: 0 14px;
-		border: 1px solid red;
+		width: 136px;
+		margin: 0;
 	}
 
 
