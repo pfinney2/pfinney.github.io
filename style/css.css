@@ -491,6 +491,11 @@ footer {
 		width: 100px;
 	}
 
+	#clientsGif {
+		width: 70%;
+		border-radius: 10px;
+	}
+
 	p.navlink2 {
 		font-family: mr-eaves-xl-modern, sans-serif;
 		text-transform: uppercase;
@@ -532,10 +537,6 @@ footer {
 
 	.scrollAdj {
 		margin-right: 0;
-	}
-
-	#clientsGif {
-		width: 70%;
 	}
 
 
