@@ -182,9 +182,14 @@ p {
 	padding: 0;
 }
 
+.flexboxes-row .flexboxes:first-child {
+	border-left: 0;
+}
+
 
 .flexboxes {
 	border-bottom: 1px solid #444444;
+	border-left: 1px solid #444444;
 	font-size: 14px;
 	font-style: bold;
 	min-height: 200px;
@@ -224,7 +229,7 @@ p {
 
 #r1n2 {
 	flex: 60;
-	border-left: 1px solid #444444;
+/*	border-left: 1px solid #444444;*/
 	padding-top: 80px;
 }
 
@@ -237,7 +242,7 @@ p {
 
 #r2n2 {
 	flex: 48;
-	border-left: 1px solid #444444;	
+/*	border-left: 1px solid #444444;	*/
 }	
 
 
@@ -255,13 +260,13 @@ p {
 
 #r4n2 {
 	flex: 33;
-	border-left: 1px solid #444444;	
+/*	border-left: 1px solid #444444;	*/
 }
 
 
 #r4n3 {
 	flex: 42;
-	border-left: 1px solid #444444;	
+/*	border-left: 1px solid #444444;	*/
 }	
 
 
