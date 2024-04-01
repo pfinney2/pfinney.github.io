@@ -1,0 +1,17 @@
+.test-images {
+  display: block;
+  margin: 1.5em auto;
+}
+
+
+#slideover1::-webkit-scrollbar {
+  display: none;
+
+}
+
+/* Large Up */
+@media only screen and (min-width: 64.063em) {
+  .test-images {
+    max-width: 80%;
+  }
+}
