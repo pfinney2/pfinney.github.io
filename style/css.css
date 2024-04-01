@@ -427,6 +427,10 @@ footer {
 
 @media only screen and (min-width: 1px) and (max-width: 600px) {
 
+	body {
+		overflow-x: hidden;
+	}
+
 	h1 {
 		font-size: 1.6em;
 	}
@@ -439,6 +443,10 @@ footer {
 
 	a.buttonLink {
 		font-size: 0.9em;
+	}
+
+	.flexboxes {
+		border-left: none;
 	}
 
 	#r1n2 {
