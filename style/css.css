@@ -446,7 +446,7 @@ footer {
 	}
 
 	.flexboxes {
-		border-left: none;
+		border-left: 0;
 	}
 
 	#r1n2 {
@@ -503,6 +503,8 @@ footer {
 
 	p#cta {
 		width: 60%;
+		margin-left: auto;
+		margin-right: auto;
 		border: 1px solid red;
 	}
 
