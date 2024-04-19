@@ -198,7 +198,13 @@ p {
 	margin: 0;
 	padding: 0;
 	display: flex;
+/*	transition: 1.0s;*/
 }
+
+/*.flexboxes:hover {
+	background-color: #141414;
+	transition: 0.3s;
+}*/
 
 .flexboxes p.cellnum {
 	padding: 10px;
@@ -409,6 +415,54 @@ footer {
 	margin-bottom: 60px;
 }
 
+
+.container h2 {
+	color: #BDFF06;
+}
+
+label {
+	font-family: lft-etica-mono, sans-serif;
+	font-size: 0.64em;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	color: #FFFFFF;
+	width: 120px;
+	display: block;
+
+}
+
+form#contactme {
+	position: relative;
+	top: 120px;
+}
+
+div.row, div.container {
+	margin: 40px 20px 40px 0;
+}
+
+#contact-wrapper {
+	width: 750px;
+	border: 1px solid orangered;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.form-control {
+	border-bottom: 1px solid #444444;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	background-color: #000000;
+	color: #FFFFFF;
+	padding: 10px;
+	width: 100%;
+}
+
+fieldset {
+	border: none;
+}
+
 /*-- 1200px --*/
 @media only screen and (min-width: 601px) and (max-width: 1400px) {
 
@@ -422,6 +476,10 @@ footer {
 		font-size: 0.5em;
 		margin-left: 20px;
 
+	}
+
+	#contact-wrapper {
+		width: 75%;
 	}
 
 }
@@ -552,6 +610,9 @@ footer {
 		margin: 0;
 	}
 
+	#contact-wrapper {
+		width: 90%;
+	}
 
 
 }
