@@ -31,7 +31,7 @@ li {
 	margin-top: 10px;
 }
 
-a.buttonLink {
+a.buttonLink, input.btn-primary {
 	display: inline-block;
 	font-family: lft-etica-mono, sans-serif;
 	text-transform: uppercase;
@@ -46,9 +46,14 @@ a.buttonLink {
 	border-radius: 50px;
 }
 
-a.buttonLink:hover {
+input.btn-primary {
+	background-color: #000000;
+}
+
+a.buttonLink:hover, input.btn-primary:hover {
 	background-color: #BDFF06;
 	color: #000000;
+	cursor: pointer;
 }
 
 #square {
@@ -442,7 +447,6 @@ div.row, div.container {
 
 #contact-wrapper {
 	width: 750px;
-	border: 1px solid orangered;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -612,6 +616,14 @@ fieldset {
 
 	#contact-wrapper {
 		width: 90%;
+	}
+
+	form#contactme {
+		top: 70px;
+	}
+
+	div.row, div.container {
+		margin: 20px 15px 20px 0;
 	}
 
 
