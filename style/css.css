@@ -206,13 +206,18 @@ p {
 /*	transition: 1.0s;*/
 }
 
-/*.flexboxes:hover {
-	background-color: #141414;
-	transition: 0.3s;
-}*/
+.flexboxes:has(img.expand):hover {
+	background-color: #111111;
+	transition: 0.1s;
+}
+
+.flexboxes:has(img.expand) {
+	cursor: pointer;
+}
 
 .flexboxes p.cellnum {
 	padding: 10px;
+	width: 40px;
 }
 
 .flexboxes p.cellnum img.expand {
@@ -220,6 +225,8 @@ p {
 	right: 0;
 	display: block;
 	width: 20px;
+	justify-self: flex-start;
+	align-self: flex-start;
 }
 
 .flexboxes img {
@@ -442,10 +449,11 @@ form#contactme {
 }
 
 div.row, div.container {
-	margin: 40px 20px 40px 0;
+	margin: 0px 20px 40px 0;
 }
 
 #contact-wrapper {
+	padding-top: 40px;
 	width: 750px;
 	position: relative;
 	margin-left: auto;
