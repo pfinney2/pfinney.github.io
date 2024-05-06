@@ -158,6 +158,15 @@ h2 {
 	color: #BDFF06;
 }
 
+h3 {
+	font-family: mr-eaves-xl-modern, sans-serif;
+	text-transform: uppercase;
+	letter-spacing: 0.3em;
+	font-weight: 700;
+	color: #BDFF06;
+	font-size: 1.6em;
+}
+
 p {
 	color: #FFFFFF;
 }
@@ -236,7 +245,7 @@ p {
 	margin: auto;
 	padding: 100px 0;
 	position: relative;
-	right: 20px;
+	right: 10px;
 
 }
 
@@ -289,8 +298,18 @@ p {
 
 
 #r5n1 {
-	flex: 1;
+	flex: 35;
 }
+
+#r5n2 {
+	flex: 35;
+}
+
+#r5n3 {
+	flex: 30;
+}
+
+
 
 .show {
 	display: flex;

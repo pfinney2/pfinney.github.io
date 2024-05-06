@@ -25,6 +25,33 @@ div.imgT img, div.imgW img {
   padding: 0;
 }
 
+div.longDesc {
+  width: 70%;
+  padding: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+div.desc2 img.descImg {
+  width: 150px;
+  padding-left: 32%;
+}
+
+div.longDesc div.desc1, div.longDesc div.desc2 {
+  flex: 1;
+  padding: 20px;
+}
+
+div.desc1 h3, div.desc1 p, div.desc2 p {
+  color: #888888;
+}
+
+
+div.spacer {
+  height: 130px;
+}
+
+
 .close-x {
   position: absolute;
   top: 36px;
@@ -100,6 +127,7 @@ div.imgT img, div.imgW img {
 }
 
 
+
 /*-- 600px --*/
 
 @media only screen and (min-width: 1px) and (max-width: 600px) {
@@ -112,5 +140,30 @@ div.imgT img, div.imgW img {
   .imgSq img {
     width: 100%;
   }
+
+  div.longDesc {
+    width: 50%;
+    display: block;
+    padding: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  div.longDesc div.desc1, div.longDesc div.desc2 {
+    padding: 0;
+  }
+
+  div.spacer {
+    height: 20px;
+  }
+
+  div.desc2 img.descImg {
+    width: 100px;
+    padding-left: 0%;
+    display: block;
+    margin: 40px auto;
+    border: 1px solid lightgreen;
+  }
+
 
 }
