@@ -419,8 +419,11 @@ p#cta {
 }
 
 #arrow {
-	width: 70px;
-	padding: 0 10px;
+	width: 140px;
+	padding: 0 17px 0 8px;
+	display: inline-block;
+	position: relative;
+	top: 21px;
 }
 
 footer {
