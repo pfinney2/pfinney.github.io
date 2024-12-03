@@ -465,21 +465,31 @@ label, small {
 
 }
 
-form#contactme, form#mailingList {
+form#contactme {
 	position: relative;
 	top: 120px;
+}
+
+form#mailingList {
+	position: relative;
+	top: 0;
 }
 
 div.row, div.container {
 	margin: 0px 20px 40px 0;
 }
 
-#contact-wrapper, #mailingList-wrapper {
+#contact-wrapper, #mailingList-wrapper, #mailingList-wrapper-header {
 	padding-top: 40px;
 	width: 750px;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+
+#mailingList-wrapper-header {
+	padding-top: 140px;
 }
 
 .form-control {
