@@ -454,18 +454,18 @@ footer {
 	color: #BDFF06;
 }
 
-label {
+label, small {
 	font-family: lft-etica-mono, sans-serif;
 	font-size: 0.64em;
 	text-transform: uppercase;
 	letter-spacing: 0.3em;
 	color: #FFFFFF;
-	width: 120px;
+	width: 420px;
 	display: block;
 
 }
 
-form#contactme {
+form#contactme, form#mailingList {
 	position: relative;
 	top: 120px;
 }
@@ -474,7 +474,7 @@ div.row, div.container {
 	margin: 0px 20px 40px 0;
 }
 
-#contact-wrapper {
+#contact-wrapper, #mailingList-wrapper {
 	padding-top: 40px;
 	width: 750px;
 	position: relative;
@@ -490,7 +490,22 @@ div.row, div.container {
 	background-color: #000000;
 	color: #FFFFFF;
 	padding: 10px;
-	width: 100%;
+	margin-bottom: 20px;
+	width: 95%;
+}
+
+.form-field-narrow {
+	width: 46%;
+	float: left;
+}
+
+#horns {
+	animation: horns2 3s infinite;
+	transform: rotate(-24deg);
+}
+
+@keyframes horns2 {
+  	50% {transform: rotate(24deg);}
 }
 
 fieldset {
@@ -512,7 +527,7 @@ fieldset {
 
 	}
 
-	#contact-wrapper {
+	#contact-wrapper, #mailingList-wrapper {
 		width: 75%;
 	}
 
@@ -644,11 +659,11 @@ fieldset {
 		margin: 0;
 	}
 
-	#contact-wrapper {
+	#contact-wrapper, #mailingList-wrapper {
 		width: 90%;
 	}
 
-	form#contactme {
+	form#contactme, form#mailingList {
 		top: 70px;
 	}
 
