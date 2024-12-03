@@ -479,6 +479,7 @@ div.row, div.container {
 	margin: 0px 20px 40px 0;
 }
 
+
 #contact-wrapper, #mailingList-wrapper, #mailingList-wrapper-header {
 	padding-top: 40px;
 	width: 750px;
@@ -537,7 +538,7 @@ fieldset {
 
 	}
 
-	#contact-wrapper, #mailingList-wrapper {
+	#contact-wrapper, #mailingList-wrapper, #mailingList-wrapper-header {
 		width: 75%;
 	}
 
@@ -669,12 +670,21 @@ fieldset {
 		margin: 0;
 	}
 
-	#contact-wrapper, #mailingList-wrapper {
+	#contact-wrapper, #mailingList-wrapper, #mailingList-wrapper-header {
 		width: 90%;
 	}
 
-	form#contactme, form#mailingList {
+	#mailingList-wrapper-header {
+	padding-top: 65px;
+	}
+
+
+	form#contactme {
 		top: 70px;
+	}
+
+	form#mailingList {
+		top: 0;
 	}
 
 	div.row, div.container {
