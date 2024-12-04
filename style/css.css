@@ -671,7 +671,9 @@ fieldset {
 	}
 
 	#contact-wrapper, #mailingList-wrapper, #mailingList-wrapper-header {
-		width: 50%;
+		width: 90%;
+		margin-left: 8%;
+		margin-right: 8%;
 	}
 
 	#mailingList-wrapper-header {
