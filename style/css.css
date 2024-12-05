@@ -510,6 +510,14 @@ div.row, div.container {
 	float: left;
 }
 
+input:focus, textarea:focus {
+	background-color: #242424;
+	outline: none;
+	border-width: none;
+	border-radius: none;
+	border-color: #888888;
+}
+
 #horns {
 	animation: horns2 3s infinite;
 	transform: rotate(-24deg);
@@ -691,6 +699,11 @@ fieldset {
 
 	form#mailingList {
 		top: 0;
+	}
+
+	label, small {
+		width: 180px;
+		border: 1px solid skyblue;
 	}
 
 	div.row, div.container {
