@@ -702,8 +702,7 @@ fieldset {
 	}
 
 	label, small {
-		width: 180px;
-		border: 1px solid skyblue;
+		width: 240px;
 	}
 
 	div.row, div.container {
