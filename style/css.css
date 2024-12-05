@@ -522,6 +522,10 @@ input:focus, textarea:focus {
 	border-color: #888888;
 }
 
+#First_Name__div {
+	margin-right: 5%;
+}
+
 #horns {
 	animation: horns2 3s infinite;
 	transform: rotate(-24deg);
@@ -707,6 +711,14 @@ fieldset {
 
 	label, small {
 		width: 240px;
+	}
+
+	.form-field-narrow {
+		width: 41%;
+	}
+
+	#First_Name__div {
+		margin-right: 15%;
 	}
 
 	div.row, div.container {
