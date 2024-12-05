@@ -510,6 +510,10 @@ div.row, div.container {
 	float: left;
 }
 
+input {
+	border-radius: 0;
+}
+
 input:focus, textarea:focus {
 	background-color: #242424;
 	outline: none;
