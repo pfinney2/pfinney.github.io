@@ -510,7 +510,7 @@ div.row, div.container {
 	float: left;
 }
 
-input {
+input, textarea {
 	border-radius: 0;
 }
 
