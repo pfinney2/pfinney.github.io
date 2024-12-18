@@ -539,6 +539,14 @@ fieldset {
 	border: none;
 }
 
+div.class {
+	width: 500px;
+	top: 300px;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
 /*-- 1200px --*/
 @media only screen and (min-width: 601px) and (max-width: 1400px) {
 
@@ -723,6 +731,12 @@ fieldset {
 
 	div.row, div.container {
 		margin: 20px 15px 20px 0;
+	}
+
+	div.thanks {
+		width: 400px;
+		margin-right: 100px;
+		margin-left: 100px;
 	}
 
 
