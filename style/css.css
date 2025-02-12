@@ -71,7 +71,7 @@ a.buttonLink:hover, input.btn-primary:hover {
 }
 
 #logo-horiz {
-	width: 160px;
+	width: 36px;
 }
 
 div#navlinks {
@@ -124,7 +124,11 @@ p.navlink a, p.navlink2 a {
 }
 
 p.navlink2:first-child {
-	right: 200px;
+	right: 300px;
+}
+
+p.navlink2:nth-child(2) {
+	right: 180px;
 }
 
 p#byline {
@@ -136,7 +140,7 @@ p#byline {
 	font-style: normal;
 	position: fixed;
 	color: #FFFFFF;
-	left: 240px;
+	left: 440px;
 	width: 50%;
 }
 
@@ -569,10 +573,14 @@ div.thanks {
 }
 
 
-/*-- 950px --*/
-@media only screen and (min-width: 1px) and (max-width: 950px) {
+/*-- 675px --*/
+@media only screen and (min-width: 1px) and (max-width: 675px) {
 
 	p#byline {
+		display: none;
+	}
+
+	p.navlink2:first-child {
 		display: none;
 	}
 
@@ -633,7 +641,7 @@ div.thanks {
 	}
 
 	#logo-horiz {
-		width: 100px;
+		width: 32px;
 	}
 
 	#clientsGif {
@@ -651,9 +659,11 @@ div.thanks {
 		margin: 6px;
 	}
 
-	p.navlink2:first-child {
-		right: 130px;
+	p.navlink2:nth-child(2) {
+		right: 140px;
 	}
+
+
 
 	#arrow {
 		display: none;
